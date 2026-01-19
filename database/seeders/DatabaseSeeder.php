@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         // create a test user
         User::updateOrCreate(
             ['email' => 'test@example.com'],
-            ['name' => 'Test User', 'password' => bcrypt('password')]
+            ['name' => 'Test User', 'password' => bcrypt('password'), 'role' => 'user']
         );
 
         $this->call([

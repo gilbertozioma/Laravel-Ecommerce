@@ -16,7 +16,7 @@ class AdminUserSeeder extends Seeder
 
         \App\Models\User::updateOrCreate(
             ['email' => $email],
-            ['name' => 'Admin', 'password' => bcrypt('password')]
+            ['name' => 'Admin', 'password' => bcrypt('password'), 'role' => 'admin']
         );
     }
 }
